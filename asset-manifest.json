@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/vaccineforbharat/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/vaccineforbharat/static/js/main.4346c96e.chunk.js",
-    "main.js.map": "/vaccineforbharat/static/js/main.4346c96e.chunk.js.map",
+    "main.js": "/vaccineforbharat/static/js/main.b1bc9557.chunk.js",
+    "main.js.map": "/vaccineforbharat/static/js/main.b1bc9557.chunk.js.map",
     "runtime-main.js": "/vaccineforbharat/static/js/runtime-main.e9cd5246.js",
     "runtime-main.js.map": "/vaccineforbharat/static/js/runtime-main.e9cd5246.js.map",
-    "static/js/2.5f91c8a6.chunk.js": "/vaccineforbharat/static/js/2.5f91c8a6.chunk.js",
-    "static/js/2.5f91c8a6.chunk.js.map": "/vaccineforbharat/static/js/2.5f91c8a6.chunk.js.map",
+    "static/js/2.3b5048b0.chunk.js": "/vaccineforbharat/static/js/2.3b5048b0.chunk.js",
+    "static/js/2.3b5048b0.chunk.js.map": "/vaccineforbharat/static/js/2.3b5048b0.chunk.js.map",
     "static/js/3.0ba68dd4.chunk.js": "/vaccineforbharat/static/js/3.0ba68dd4.chunk.js",
     "static/js/3.0ba68dd4.chunk.js.map": "/vaccineforbharat/static/js/3.0ba68dd4.chunk.js.map",
     "index.html": "/vaccineforbharat/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/vaccineforbharat/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.5f91c8a6.chunk.js.LICENSE.txt": "/vaccineforbharat/static/js/2.5f91c8a6.chunk.js.LICENSE.txt",
+    "static/js/2.3b5048b0.chunk.js.LICENSE.txt": "/vaccineforbharat/static/js/2.3b5048b0.chunk.js.LICENSE.txt",
     "static/media/build4bharat.06144520.jpg": "/vaccineforbharat/static/media/build4bharat.06144520.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e9cd5246.js",
-    "static/js/2.5f91c8a6.chunk.js",
+    "static/js/2.3b5048b0.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.4346c96e.chunk.js"
+    "static/js/main.b1bc9557.chunk.js"
   ]
 }
