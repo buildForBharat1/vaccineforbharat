@@ -16,7 +16,8 @@ import { triggerCallback } from './webCallback';
 import Image from './assests/build4bharat.jpg';
 import Box from '@material-ui/core/Box';
 import { renderOtpStage, renderCaptchStage, renderSuccessStage, renderExistingBookingStage,
-renderBookingFailedStage, renderVaccinatedStage, renderErrorStage, renderRegisteredStage, renderNotRegiseteredState, renderAlternatePhoneInitState } from './stateView';
+  renderBookingFailedStage, renderVaccinatedStage, renderErrorStage, renderRegisteredStage,
+  renderNotRegiseteredState, renderAlternatePhoneInitState, renderPhoneNumberConfirmation } from './stateView';
 const shajs = require('sha.js');
 
 const useStyles = makeStyles({
@@ -152,6 +153,12 @@ function App(props) {
     });
   };
 
+  const confirmRegisteredPhone = () => {
+    setState({ ...state,
+      stage: PROCESS_STAGE.CONFIRM_PHONE
+    });
+  }
+
   const goToHome = () => {
     triggerCallback(state, 0);
   };
@@ -196,7 +203,9 @@ function App(props) {
         return renderNotRegiseteredState({ classes, registeredPhone: state.registeredPhone, 
           enterAlternatePhoneInitStage, goToHome, autoCallBackState });
       case PROCESS_STAGE.ALTERNATE_PHONE_INIT:
-        return renderAlternatePhoneInitState(classes, state, submitRegisteredPhone, changeRegisteredPhone);
+        return renderAlternatePhoneInitState(classes, state, submitRegisteredPhone, changeRegisteredPhone, confirmRegisteredPhone);
+      case PROCESS_STAGE.CONFIRM_PHONE:
+        return renderPhoneNumberConfirmation(classes, state, submitRegisteredPhone, enterAlternatePhoneInitStage);
       default:
         return renderOtpStage({state, retryTime, classes, changeOtp, submitOtp, triggerOtp, enterAlternatePhoneInitStage});
     }

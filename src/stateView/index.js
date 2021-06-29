@@ -9,6 +9,7 @@ import Link from '@material-ui/core/Link';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { getMinuteString } from '../utils/stringUtils';
 import Box from '@material-ui/core/Box';
+import HelpIcon from '@material-ui/icons/Help';
 
 const getRedirectElement = (classes) => {
   return (<div className={classes.body}>
@@ -343,7 +344,7 @@ export const renderNotRegiseteredState = (params) => {
   )
 };
 
-export const renderAlternatePhoneInitState = (classes, state, submitRegisteredPhone, changeRegisteredPhone) => {
+export const renderAlternatePhoneInitState = (classes, state, submitRegisteredPhone, changeRegisteredPhone, confirmRegisteredPhone) => {
   return (
     <Grid alignItems="center" justify="center" direction="column">
       <Grid item lg={12}>
@@ -371,12 +372,55 @@ export const renderAlternatePhoneInitState = (classes, state, submitRegisteredPh
           variant="contained"
           color="primary"
           fullWidth={true}
-          id="submitRegisteredPhone"
-          onClick={submitRegisteredPhone}>
+          id="confirmRegisteredPhone"
+          onClick={confirmRegisteredPhone}>
           <Typography variant="subtitle1">
               Send OTP
           </Typography>
         </Button>
+      </Grid>
+    </Grid>
+  )
+};
+
+export const renderPhoneNumberConfirmation = (classes, state, submitRegisteredPhone, enterAlternatePhoneInitStage) => {
+  return (
+    <Grid alignItems="center" justify="center" direction="column">
+      <Grid item lg={12}>
+        <HelpIcon size="large"></HelpIcon>
+      </Grid>
+      <Grid item lg={12}>
+        <Typography variant="h6">
+          <Box fontWeight="fontWeightBold" my={2}>
+            Are you sure you used {state.registeredPhone} for Vaccination?
+          </Box>
+        </Typography>
+      </Grid>
+      <Grid direction="row" justify="space-evenly">
+        <Grid item lg={12}>
+          <Button className={classes.button}
+            variant="outlined"
+            color="primary"
+            fullWidth={true}
+            id="submitRegisteredPhone"
+            onClick={submitRegisteredPhone}>
+            <Typography variant="subtitle1">
+              YES
+            </Typography>
+          </Button>
+        </Grid>
+        <Grid item lg={12}>
+          <Button className={classes.button}
+            variant="outlined"
+            color="primary"
+            fullWidth={true}
+            id="declineRegisteredPhone"
+            onClick={enterAlternatePhoneInitStage}>
+            <Typography variant="subtitle1">
+              NO
+            </Typography>
+          </Button>
+        </Grid>
       </Grid>
     </Grid>
   )
