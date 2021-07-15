@@ -316,6 +316,11 @@ export const renderAlternatePhoneInitState = (classes, state, submitRegisteredPh
               Enter phone number used for Vaccination
             </Box>
         </Typography>
+        <Typography variant="subtitle1">
+            <Box my={2}>
+              अपना वैक्सीनेशन वाला फ़ोन नंबर दीजिये
+            </Box>
+        </Typography>
       </Grid>
       <Grid item lg={12}>
         <TextField
@@ -356,6 +361,11 @@ export const renderPhoneNumberConfirmation = (classes, state, submitRegisteredPh
         <Typography variant="h6">
           <Box fontWeight="fontWeightBold" my={2}>
             Are you sure you used {state.registeredPhone} for Vaccination?
+          </Box>
+        </Typography>
+        <Typography variant="subtitle1">
+          <Box my={2}>
+            क्या {state.registeredPhone} ही आपका वैक्सीनेशन वाला फ़ोन नंबर है ?
           </Box>
         </Typography>
       </Grid>
