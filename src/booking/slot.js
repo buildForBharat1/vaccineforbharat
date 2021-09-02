@@ -32,24 +32,23 @@ const getPrioritisedSlot = (availableSlots, capacityForDose, doseToBook) => {
     return _.maxBy(freeSlotsAboveThreshold, slot => slot[capacityForDose]);
   }
   // if(doseToBook === DOSE_TYPE.SECOND) {
-  //  return _.maxBy(availableSlots, slot => slot[capacityForDose]);
+  //   return _.maxBy(availableSlots, slot => slot[capacityForDose]);
   // }
-  return {};
-  // const paidSlotsBelowThresholdPrice = _.filter(availableSlots, (slot) => {
-  //   const vaccineFeeList = _.get(slot, 'vaccine_fees', []);
-  //   const vaccineName = _.get(slot, 'vaccine');
-  //   const vaccineFee = _.filter(vaccineFeeList, (vaccine) => {
-  //     return _.get(vaccine, 'vaccine') === vaccineName
-  //   });
+  const paidSlotsBelowThresholdPrice = _.filter(availableSlots, (slot) => {
+    const vaccineFeeList = _.get(slot, 'vaccine_fees', []);
+    const vaccineName = _.get(slot, 'vaccine');
+    const vaccineFee = _.filter(vaccineFeeList, (vaccine) => {
+      return _.get(vaccine, 'vaccine') === vaccineName
+    });
 
-  //   if(_.isEmpty(vaccineFee)) {
-  //     return false;
-  //   }
-  //   return _.get(slot, 'fee_type') === VACCINE_TYPE.PAID
-  //     && _.toNumber(vaccineFee[0].fee) <= VACCINE_FEE_THRESHOLD;
-  // });
+    if(_.isEmpty(vaccineFee)) {
+      return false;
+    }
+    return _.get(slot, 'fee_type') === VACCINE_TYPE.PAID
+      && _.toNumber(vaccineFee[0].fee) <= VACCINE_FEE_THRESHOLD;
+  });
   
-  // return _.maxBy(paidSlotsBelowThresholdPrice, slot => slot[capacityForDose]);
+  return _.maxBy(paidSlotsBelowThresholdPrice, slot => slot[capacityForDose]);
 };
 
 const getAvailableVaccineSlot = (state, centerList, doseToBook, firstDoseVaccine) => {
