@@ -90,9 +90,13 @@ const getAvailableVaccineSlot = (state, centerList, doseToBook, firstDoseVaccine
 };
 
 export const fetchSlots = async(state, stateCallback) => {
-  const { district, doseToBook, firstDoseVaccine } = state;
+  const { district, doseToBook, firstDoseVaccine, beneficiaryDetails } = state;
   if (!district) {
-    stateCallback({ stage: PROCESS_STAGE.REGISTERED });
+    if(doseToBook === DOSE_TYPE.SECOND) {
+      stateCallback({ stage: PROCESS_STAGE.VACCINATED, beneficiaryDetails });
+    } else {
+      stateCallback({ stage: PROCESS_STAGE.REGISTERED });
+    }
     return;
   }
   const dateString = getSlotDateString();
