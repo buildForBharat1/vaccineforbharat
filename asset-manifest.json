@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vaccineforbharat/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/vaccineforbharat/static/js/main.4d4cf50d.chunk.js",
-    "main.js.map": "/vaccineforbharat/static/js/main.4d4cf50d.chunk.js.map",
+    "main.js": "/vaccineforbharat/static/js/main.f10a328f.chunk.js",
+    "main.js.map": "/vaccineforbharat/static/js/main.f10a328f.chunk.js.map",
     "runtime-main.js": "/vaccineforbharat/static/js/runtime-main.a0bcaea1.js",
     "runtime-main.js.map": "/vaccineforbharat/static/js/runtime-main.a0bcaea1.js.map",
     "static/js/2.d80e0ca9.chunk.js": "/vaccineforbharat/static/js/2.d80e0ca9.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.a0bcaea1.js",
     "static/js/2.d80e0ca9.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.4d4cf50d.chunk.js"
+    "static/js/main.f10a328f.chunk.js"
   ]
 }
