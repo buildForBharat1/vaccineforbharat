@@ -31,9 +31,9 @@ const getPrioritisedSlot = (availableSlots, capacityForDose, doseToBook) => {
   if(!_.isEmpty(freeSlotsAboveThreshold)) {
     return _.maxBy(freeSlotsAboveThreshold, slot => slot[capacityForDose]);
   }
-  if(doseToBook === DOSE_TYPE.SECOND) {
-    return _.maxBy(availableSlots, slot => slot[capacityForDose]);
-  }
+  // if(doseToBook === DOSE_TYPE.SECOND) {
+  //   return _.maxBy(availableSlots, slot => slot[capacityForDose]);
+  // }
   const paidSlotsBelowThresholdPrice = _.filter(availableSlots, (slot) => {
     const vaccineFeeList = _.get(slot, 'vaccine_fees', []);
     const vaccineName = _.get(slot, 'vaccine');
